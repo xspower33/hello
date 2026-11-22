@@ -8,7 +8,7 @@ FROM alpine:3.20
 RUN adduser -D -u 10001 app
 COPY --from=build /out/hello /app/hello
 USER app
-ENV PORT=8080 \
+ENV PORT=4380 \
     TZ=Europe/Istanbul
-EXPOSE 8080
+EXPOSE 4380
 ENTRYPOINT ["/app/hello"]

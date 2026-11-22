@@ -44,8 +44,8 @@ go run .
 
 | Değişken | Varsayılan | Açıklama |
 | --- | --- | --- |
-| `APP_PORT` | `80` | Host tarafında dışa açılan port (konteyner içi hep `8080`) |
-| `PORT` | `8080` | Konteyner içinde dinlenen port |
+| `APP_PORT` | `80` | Host tarafında dışa açılan port (konteyner içi hep `4380`) |
+| `PORT` | `4380` | Konteyner içinde dinlenen port |
 | `TZ` | `Europe/Istanbul` | Saat ve selamlama için saat dilimi |
 
 ## Dosyalar

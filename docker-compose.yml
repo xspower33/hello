@@ -3,13 +3,13 @@ services:
     build: .
     image: hello:latest
     ports:
-      - "${APP_PORT:-80}:8080"
+      - "${APP_PORT:-80}:4380"
     environment:
-      PORT: "8080"
+      PORT: "4380"
       TZ: "Europe/Istanbul"
     restart: unless-stopped
     healthcheck:
-      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:8080/healthz"]
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:4380/healthz"]
       interval: 30s
       timeout: 3s
       retries: 3
