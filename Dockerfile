@@ -1,4 +1,5 @@
 FROM golang:1.24-alpine AS build
+ENV GOTOOLCHAIN=local
 WORKDIR /src
 COPY go.mod ./
 COPY . .
