@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>404 — kayıp sayfa</title>
+  <link rel="stylesheet" href="/static/notfound.css">
+</head>
+<body>
+  <div class="grid" aria-hidden="true"></div>
+
+  <div class="radar" aria-hidden="true">
+    <span class="ring"></span>
+    <span class="ring r2"></span>
+    <span class="ring r3"></span>
+    <span class="sweep"></span>
+  </div>
+
+  <div class="dust" aria-hidden="true">
+    <span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span>
+  </div>
+
+  <main class="stage">
+    <p class="badge">404 · kayıp sayfa</p>
+
+    <h1 class="code" data-text="404">404</h1>
+
+    <p class="terminal">
+      <span class="prompt">&gt;</span>
+      <span class="method">{{.Method}}</span>
+      <span class="path">{{.Path}}</span>
+      <span class="arrow">&#8594;</span>
+      <span class="fail">bulunamadı</span>
+      <span class="caret" aria-hidden="true"></span>
+    </p>
+
+    <p class="lead">Aradığın sayfa burada değil. Belki hiç olmadı.</p>
+
+    <div class="actions">
+      <a class="btn primary" href="/">baştan dene</a>
+      <button class="btn" id="roll" type="button">rastgele uç nokta</button>
+    </div>
+
+    <ul class="chips" id="chips">
+      {{range .Endpoints}}
+      <li>
+        <button type="button" data-path="{{.Path}}" title="{{.Description}}">{{.Path}}</button>
+      </li>
+      {{end}}
+    </ul>
+
+    <pre class="panel" id="panel" hidden><code></code></pre>
+  </main>
+
+  <script src="/static/notfound.js"></script>
+</body>
+</html>
