@@ -32,6 +32,20 @@ Go 1.24+ kuruluysa:
 go run .
 ```
 
+## Dokploy ile yayınlama
+
+Depo, hem `docker compose` hem de Dokploy'un Dockerfile derleyicisiyle çalışır.
+
+1. Uygulama → **General** → **Build Type** = `Dockerfile`
+   (Nixpacks seçili kaldığı sürece repodaki `Dockerfile` kullanılmaz)
+2. **Dockerfile Path** = `Dockerfile`
+3. **Port** = `4380` — Dokploy'un varsayılanı `3000`'dür, bunu mutlaka değiştir;
+   Traefik trafiği bu porta yönlendirir.
+4. Ortam değişkeni olarak istersen `TZ=Europe/Istanbul` ekle (imajda zaten varsayılan).
+5. Kaydet ve **Deploy**.
+
+Konteyner root olmayan `app` (uid 10001) kullanıcısıyla çalışır ve imaj ~20 MB'tır.
+
 ## Uç noktalar
 
 | Yol | Açıklama |
