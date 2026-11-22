@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>hello — karşılama</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="aurora" aria-hidden="true">
+    <span class="blob b1"></span>
+    <span class="blob b2"></span>
+    <span class="blob b3"></span>
+    <span class="blob b4"></span>
+  </div>
+
+  <main class="stage">
+    <section class="card">
+      <p class="label">HELLO</p>
+      <h1 id="clock" aria-hidden="true">{{.Time}}</h1>
+      <p class="sr-only">Şu anki saat: {{.Time}}</p>
+      <p id="date">{{.Date}}</p>
+      <p id="greeting">{{.Greeting}}</p>
+      <p class="hint">docker compose up · Go ile servis edildi</p>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

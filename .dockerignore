@@ -1,0 +1,9 @@
+.git
+.gitignore
+docs
+README.md
+*.md
+docker-compose.yml
+Dockerfile
+hello
+hello.exe
